@@ -10,8 +10,8 @@ const Home: NextPage = () => {
     const coloredClick = (e: React.MouseEvent) => {
         const element = document.createElement('span');
         element.className = 'circle';
-        element.style.left = (e.clientX - 10) + "px";
-        element.style.top = (e.clientY - 10) + "px";
+        element.style.left = (e.pageX ) + "px";
+        element.style.top = (e.pageY) + "px";
 
         document.body.append(element)
 
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
     }
     return (
         <>
-            <div className={"wrapper"}  onClick={(e:React.MouseEvent) => {
+            <div className={"wrapper"} id="wrapper"  onClick={(e:React.MouseEvent) => {
                 coloredClick(e)
             }}>
                 <Head>
