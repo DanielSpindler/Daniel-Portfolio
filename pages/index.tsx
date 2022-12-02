@@ -10,8 +10,8 @@ const Home: NextPage = () => {
     const coloredClick = (e: React.MouseEvent) => {
         const element = document.createElement('span');
         element.className = 'circle';
-        element.style.left = (e.pageX ) + "px";
-        element.style.top = (e.pageY) + "px";
+        element.style.left = (e.pageX -10 ) + "px";
+        element.style.top = (e.pageY -10) + "px";
 
         document.body.append(element)
 
