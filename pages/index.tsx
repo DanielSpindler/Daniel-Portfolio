@@ -3,11 +3,28 @@ import Head from "next/head";
 import About from "../components/About";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import React from "react";
 
 const Home: NextPage = () => {
+
+    const coloredClick = (e: React.MouseEvent) => {
+        const element = document.createElement('span');
+        element.className = 'circle';
+        element.style.left = (e.clientX - 10) + "px";
+        element.style.top = (e.clientY - 10) + "px";
+
+        document.body.append(element)
+
+        setTimeout(() => {
+            element.remove()
+
+        }, 900)
+    }
     return (
         <>
-            <div className={"wrapper"}>
+            <div className={"wrapper"}  onClick={(e:React.MouseEvent) => {
+                coloredClick(e)
+            }}>
                 <Head>
                     <title>Daniel - Laravel/React Developer</title>
                     <link rel="icon" href=""/>
