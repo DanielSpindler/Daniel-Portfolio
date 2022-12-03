@@ -4,14 +4,13 @@ import About from "../components/About";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import React from "react";
-
 const Home: NextPage = () => {
 
     const coloredClick = (e: React.MouseEvent) => {
         const element = document.createElement('span');
         element.className = 'circle';
-        element.style.left = (e.pageX -10 ) + "px";
-        element.style.top = (e.pageY -10) + "px";
+        element.style.left = (e.pageX - 10) + "px";
+        element.style.top = (e.pageY - 10) + "px";
 
         document.body.append(element)
 
@@ -22,7 +21,7 @@ const Home: NextPage = () => {
     }
     return (
         <>
-            <div className={"wrapper"} id="wrapper"  onClick={(e:React.MouseEvent) => {
+            <div className={"wrapper"} id="wrapper" onClick={(e: React.MouseEvent) => {
                 coloredClick(e)
             }}>
                 <Head>

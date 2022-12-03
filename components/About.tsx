@@ -1,9 +1,11 @@
+import CarouselRotate from "./Ui-Reusable/CarouselRotate";
+import React from "react";
 
 export default function About() {
     return (
         <section id="about" className="dark-bg">
             <div className="flex about-div justify-space">
-                <div className="flex-full about-text">
+                <div className=" about-text">
                     <h3 className="gray about-intro">Introduction</h3>
                     <h1 className="white">Hello, I&#39;m Daniel Spindler</h1>
                     <h3 className="white">Every Project is a Chance to improve myself even more</h3>
@@ -14,9 +16,10 @@ export default function About() {
                         My Goal is to never stop learning and to improve in every Field.
                     </p>
                 </div>
-                <div></div>
+                <div className="carousel-div">
+                    <CarouselRotate/>
+                </div>
             </div>
-
             <div className="flex partners justify-space">
                 {/*<Image src="/images/partners/wallety.png" height={45} width={180} alt="wallety"/>
                 <Image src="/images/partners/artisty.png" height={45} width={180} alt="artisty"/>

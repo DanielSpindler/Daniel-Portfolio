@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import NavBar from "./NavBar";
-import CarouselRotate from "./Ui-Reusable/CarouselRotate";
 
 export default function Header() {
     return (
@@ -15,11 +14,8 @@ export default function Header() {
                     <p className="gray">Give me the Opportunity and i will create something Awesome!</p>
                     <a className="green" href="mailto:bewerbung@daniel-spindler.de">Write me a Mail!</a>
                 </div>
-                <div>
-                    <CarouselRotate/>
-                </div>
-                <div>
-                    <Image src="/images/ThatsMe.png" width={500} height={350} alt="daniel"/>
+                <div className="potrait">
+                    <Image src="/images/new.png" priority={true} width={290} height={350} alt="daniel"/>
                 </div>
             </div>
         </header>
